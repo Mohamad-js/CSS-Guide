@@ -12,181 +12,181 @@
       z-index: -1;
    }
 
-   .navbar {
-      height: 100px;
-      width: 100%;
-      padding: 10px;
+}
+.contentHolder {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: start;
+   justify-content: center;
+   overflow: hidden;
+
+   .inputsHolder {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      background-color: rgb(255, 255, 255);
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-
-      .title {
-         font-size: 24px;
-         color: rgb(118, 118, 118);
+      width: 30%;
+      height: 100%;
+      border: 1px solid black;
+      padding: 20px 10px 10px 10px;
+      
+      .sectionTitle {
+         background-color: rgb(92, 0, 145);
+         color: white;
+         padding: 10px;
+         margin-bottom: 10px;
       }
 
-      .tabHolder {
-         height: fit-content;
-         width: 100%;
-         display: flex;
-         align-items: center;
-         gap: 10px;
-         color: rgb(85, 85, 85);
-   
-         .tabItem {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
+      .inputItemsHolder {
+         height: 100%;
+         padding: 10px;
+         border: 1px solid rgb(154, 154, 154);
+         overflow: auto;
 
-            &:hover {
-               background-color: rgb(245, 245, 245);
-               color: black;
-            }
+         &::-webkit-scrollbar {
+            display: none;
          }
-         
-         .selected {
-            background-color: black;
-            color: white;
-            
-            &:hover {
-               background-color: black;
-               color: white;
+
+
+         .inputItem {
+            width: 100%;
+            height: fit-content;
+            border: 1px solid rgb(210, 210, 210);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 10px;
+            margin-bottom: 10px;
+
+            .inputTitle {
+               font: 13px arial;
+            }
+
+            .input {
+               width: 100%;
+               padding: 10px 5px;
+               background-color: rgba(255, 255, 255, 0.1);
+               backdrop-filter: blur(2px);
+               outline: none;
+               border: 1px solid black;
+               border-radius: 5px;
             }
          }
       }
 
    }
 
-   .contentHolder {
-      width: 100%;
+   .previewHolder {
+      width: 70%;
       height: 100%;
+      border: 1px solid black;
+      padding: 20px 10px 10px 10px;
       display: flex;
-      align-items: start;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      overflow: hidden;
 
-      .inputsHolder {
-         display: flex;
-         flex-direction: column;
-         width: 30%;
-         height: 100%;
-         border: 1px solid black;
-         padding: 20px 10px 10px 10px;
-         
-         .sectionTitle {
-            background-color: rgb(92, 0, 145);
-            color: white;
-            padding: 10px;
-            margin-bottom: 10px;
-         }
-
-         .inputItemsHolder {
-            height: 100%;
-            padding: 10px;
-            border: 1px solid rgb(154, 154, 154);
-            overflow: auto;
-
-            &::-webkit-scrollbar {
-               display: none;
-            }
-
-
-            .inputItem {
-               width: 100%;
-               height: fit-content;
-               border: 1px solid rgb(210, 210, 210);
-               display: flex;
-               flex-direction: column;
-               align-items: flex-start;
-               justify-content: space-between;
-               padding: 10px;
-               margin-bottom: 10px;
-   
-               .inputTitle {
-                  font: 13px arial;
-               }
-   
-               .input {
-                  width: 100%;
-                  padding: 10px 5px;
-                  background-color: rgba(255, 255, 255, 0.1);
-                  backdrop-filter: blur(2px);
-                  outline: none;
-                  border: 1px solid black;
-                  border-radius: 5px;
-               }
-            }
-         }
-
+      .previewTitle {
+         width: 100%;
+         background-color: rgb(92, 0, 145);
+         color: white;
+         padding: 10px;
+         margin-bottom: 10px;
       }
-
-      .previewHolder {
-         width: 70%;
+      
+      .playground {
+         width: 100%;
          height: 100%;
          border: 1px solid black;
-         padding: 20px 10px 10px 10px;
          display: flex;
-         flex-direction: column;
          align-items: center;
          justify-content: center;
+         gap: 10px;
+         overflow: auto;
 
-         .previewTitle {
-            width: 100%;
-            background-color: rgb(92, 0, 145);
-            color: white;
-            padding: 10px;
-            margin-bottom: 10px;
+         .objsHolder {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .testObj {
+               width: 50px;
+               height: 50px;
+               background-color: rgb(223, 223, 223);
+               font-size: 10px;
+               display: flex;
+               align-items: center;
+               text-align: center;
+            }
+
+            .targetObjHolder {
+               display: flex;
+               align-items: center;
+            }
          }
-         
-         .playground {
-            width: 100%;
-            height: 100%;
+
+         .item {
+            width: 200px;
+            height: 200px;
+            font-size: 10px;
+            text-align: center;
             border: 1px solid black;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            overflow: auto;
-
-            .objsHolder {
-               width: fit-content;
-               height: fit-content;
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-
-               .testObj {
-                  width: 50px;
-                  height: 50px;
-                  background-color: rgb(223, 223, 223);
-                  font-size: 10px;
-                  display: flex;
-                  align-items: center;
-                  text-align: center;
-               }
-
-               .targetObjHolder {
-                  display: flex;
-                  align-items: center;
-               }
-            }
-
-            .item {
-               width: 200px;
-               height: 200px;
-               font-size: 10px;
-               text-align: center;
-               border: 1px solid black;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-            }
          }
       }
    }
+}
+
+.navbar {
+   height: 100px;
+   width: 100%;
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   background-color: rgb(255, 255, 255);
+   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+   .title {
+      font-size: 24px;
+      color: rgb(118, 118, 118);
+   }
+
+   .tabHolder {
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgb(85, 85, 85);
+
+      .tabItem {
+         flex-grow: 1;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 10px;
+
+         &:hover {
+            background-color: rgb(245, 245, 245);
+            color: black;
+         }
+      }
+      
+      .selected {
+         background-color: black;
+         color: white;
+         
+         &:hover {
+            background-color: black;
+            color: white;
+         }
+      }
+   }
+
 }
