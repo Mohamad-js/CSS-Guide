@@ -23,6 +23,26 @@ export default function Home() {
    const [fontFamily, setFontFamily] = useState('arial');
    const [boxShadow, setBoxShadow] = useState('5px 5px 10px 0 black');
    const [opacity, setOpacity] = useState(1);
+   const [visibility, setVisibility] = useState('visible');
+   const [display, setDisplay] = useState('block');
+   const [justifyContent, setJustifyContent] = useState('start');
+   const [alignItems, setAlignItems] = useState('start');
+   const [alignContent, setAlignContent] = useState('stretch');
+   const [gap, setGap] = useState('1px');
+   const [flexDirection, setFlexDirection] = useState('row');
+   const [flexWrap, setFlexWrap] = useState('no-wrap');
+   const [flexGrow13, setFlexGrow13] = useState(0);
+   const [flexGrow14, setFlexGrow14] = useState(0);
+   const [flexGrow15, setFlexGrow15] = useState(0);
+   const [flexGrow16, setFlexGrow16] = useState(0);
+   const [flexGrow17, setFlexGrow17] = useState(0);
+   const [flexGrow18, setFlexGrow18] = useState(0);
+   const [alignSelf13, setAlignSelf13] = useState('auto');
+   const [alignSelf14, setAlignSelf14] = useState('auto');
+   const [alignSelf15, setAlignSelf15] = useState('auto');
+   const [alignSelf16, setAlignSelf16] = useState('auto');
+   const [alignSelf17, setAlignSelf17] = useState('auto');
+   const [alignSelf18, setAlignSelf18] = useState('auto');
 
 
    const handleBgColorChange = (e) => {
@@ -75,6 +95,86 @@ export default function Home() {
 
    const handlebOpacityChange = (e) => {
       setOpacity(e.target.value);
+   };
+
+   const handlebVisibilityChange = (e) => {
+      setVisibility(e.target.value);
+   };
+
+   const handleDisplayChange = (e) => {
+      setDisplay(e.target.value);
+   };
+
+   const handleJustifyContentChange = (e) => {
+      setJustifyContent(e.target.value);
+   };
+
+   const handleAlignItemsChange = (e) => {
+      setAlignItems(e.target.value);
+   };
+
+   const handleGapChange = (e) => {
+      setGap(e.target.value);
+   };
+
+   const handleFlexDirectionChange = (e) => {
+      setFlexDirection(e.target.value);
+   };
+
+   const handleFlexWrapChange = (e) => {
+      setFlexWrap(e.target.value);
+   };
+
+   const handleAlignContentChange = (e) => {
+      setAlignContent(e.target.value);
+   };
+
+   const handleFlexGrow13Change = (e) => {
+      setFlexGrow13(e.target.value);
+   };
+
+   const handleFlexGrow14Change = (e) => {
+      setFlexGrow14(e.target.value);
+   };
+
+   const handleFlexGrow15Change = (e) => {
+      setFlexGrow15(e.target.value);
+   };
+
+   const handleFlexGrow16Change = (e) => {
+      setFlexGrow16(e.target.value);
+   };
+
+   const handleFlexGrow17Change = (e) => {
+      setFlexGrow17(e.target.value);
+   };
+
+   const handleFlexGrow18Change = (e) => {
+      setFlexGrow18(e.target.value);
+   };
+
+   const handleAlignSelf13Change = (e) => {
+      setAlignSelf13(e.target.value);
+   };
+
+   const handleAlignSelf14Change = (e) => {
+      setAlignSelf14(e.target.value);
+   };
+
+   const handleAlignSelf15Change = (e) => {
+      setAlignSelf15(e.target.value);
+   };
+
+   const handleAlignSelf16Change = (e) => {
+      setAlignSelf16(e.target.value);
+   };
+
+   const handleAlignSelf17Change = (e) => {
+      setAlignSelf17(e.target.value);
+   };
+
+   const handleAlignSelf18Change = (e) => {
+      setAlignSelf18(e.target.value);
    };
 
    const toggleMenu = (income) => {
@@ -130,7 +230,7 @@ export default function Home() {
                      <label className={styles.inputTitle}
                         htmlFor="color-picker" 
                      >
-                        Background-Color: {bgColor}
+                        background-color: {bgColor}
                      </label>
 
                      <input className={styles.colorInput}
@@ -327,6 +427,24 @@ export default function Home() {
                      />
                   </div>
 
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="visibility" 
+                     >
+                        visibility: {visibility} 
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="visibility"
+                        value={visibility}
+                        onChange={handlebVisibilityChange}
+                     >
+                        <option value="visible">visible</option>
+                        <option value="hidden">hidden</option>
+                     </select>
+                  </div>
+
                </div>
             </div>
 
@@ -355,6 +473,7 @@ export default function Home() {
                               boxShadow: boxShadow,
                               clipPath: clipPath,
                               opacity: opacity,
+                              visibility: visibility,
                            }}
                         >Target Element</div>
                         <div className={styles.testObj}>Other Elements</div>
@@ -373,7 +492,399 @@ export default function Home() {
                <div className={styles.sectionTitle}>Change the Flex Box Settings</div>
 
                <div className={styles.inputItemsHolder}>
-                  Soon...
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="display" 
+                     >
+                        display: {display}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="display"
+                        value={display}
+                        onChange={handleDisplayChange}
+                     >
+                        <option value="flex">flex</option>
+                        <option value="block">block</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="justify-content" 
+                     >
+                        justify-content: {justifyContent}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="justify-content"
+                        value={justifyContent}
+                        onChange={handleJustifyContentChange}
+                     >
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-evenly">space-evenly</option>
+                        <option value="space-around">space-around</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="align-items" 
+                     >
+                        align-items: {alignItems}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="align-items"
+                        value={alignItems}
+                        onChange={handleAlignItemsChange}
+                     >
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="gap" 
+                     >
+                        gap: {gap} 
+                     </label>
+
+                     <input className={styles.input}
+                        type="text" 
+                        id="gap"
+                        value={gap}
+                        onChange={handleGapChange}
+                     />
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="flex-direction" 
+                     >
+                        flex-direction: {flexDirection}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="flex-direction"
+                        value={flexDirection}
+                        onChange={handleFlexDirectionChange}
+                     >
+                        <option value="row">row</option>
+                        <option value="row-reverse">row-reverse</option>
+                        <option value="column">column</option>
+                        <option value="column-reverse">column-reverse</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="flex-wrap" 
+                     >
+                        flex-wrap: {flexWrap}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="flex-wrap"
+                        value={flexWrap}
+                        onChange={handleFlexWrapChange}
+                     >
+                        <option value="no-wrap">no-wrap</option>
+                        <option value="wrap">wrap</option>
+                        <option value="wrap-reverse">wrap-reverse</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="align-content" 
+                     >
+                        align-content: {alignContent}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="align-content"
+                        value={alignContent}
+                        onChange={handleAlignContentChange}
+                     >
+                        <option value="stretch">stretch</option>
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.sectionTitle2}>Styles on Child 13</div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="flex-grow" 
+                     >
+                        flex-grow: {flexGrow13}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="flex-grow"
+                        value={flexGrow13}
+                        onChange={handleFlexGrow13Change}
+                     >
+                        <option value="0">0</option>
+                        <option value="0.25">0.25</option>
+                        <option value="0.5">0.5</option>
+                        <option value="0.75">0.75</option>
+                        <option value="1">1</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="align-self" 
+                     >
+                        align-self: {alignSelf13}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="align-self"
+                        value={alignSelf13}
+                        onChange={handleAlignSelf13Change}
+                     >
+                        <option value="auto">auto</option>
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.sectionTitle2}>Styles on Child 14</div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="flex-grow" 
+                     >
+                        flex-grow: {flexGrow14}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="flex-grow"
+                        value={flexGrow14}
+                        onChange={handleFlexGrow14Change}
+                     >
+                        <option value="0">0</option>
+                        <option value="0.25">0.25</option>
+                        <option value="0.5">0.5</option>
+                        <option value="0.75">0.75</option>
+                        <option value="1">1</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="align-self" 
+                     >
+                        align-self: {alignSelf14}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="align-self"
+                        value={alignSelf14}
+                        onChange={handleAlignSelf14Change}
+                     >
+                        <option value="auto">auto</option>
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.sectionTitle2}>Styles on Child 15</div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="flex-grow" 
+                     >
+                        flex-grow: {flexGrow15}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="flex-grow"
+                        value={flexGrow15}
+                        onChange={handleFlexGrow15Change}
+                     >
+                        <option value="0">0</option>
+                        <option value="0.25">0.25</option>
+                        <option value="0.5">0.5</option>
+                        <option value="0.75">0.75</option>
+                        <option value="1">1</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="align-self" 
+                     >
+                        align-self: {alignSelf15}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="align-self"
+                        value={alignSelf15}
+                        onChange={handleAlignSelf15Change}
+                     >
+                        <option value="auto">auto</option>
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.sectionTitle2}>Styles on Child 16</div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="flex-grow" 
+                     >
+                        flex-grow: {flexGrow16}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="flex-grow"
+                        value={flexGrow16}
+                        onChange={handleFlexGrow16Change}
+                     >
+                        <option value="0">0</option>
+                        <option value="0.25">0.25</option>
+                        <option value="0.5">0.5</option>
+                        <option value="0.75">0.75</option>
+                        <option value="1">1</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="align-self" 
+                     >
+                        align-self: {alignSelf16}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="align-self"
+                        value={alignSelf16}
+                        onChange={handleAlignSelf16Change}
+                     >
+                        <option value="auto">auto</option>
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.sectionTitle2}>Styles on Child 17</div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="flex-grow" 
+                     >
+                        flex-grow: {flexGrow17}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="flex-grow"
+                        value={flexGrow17}
+                        onChange={handleFlexGrow17Change}
+                     >
+                        <option value="0">0</option>
+                        <option value="0.25">0.25</option>
+                        <option value="0.5">0.5</option>
+                        <option value="0.75">0.75</option>
+                        <option value="1">1</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="align-self" 
+                     >
+                        align-self: {alignSelf17}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="align-self"
+                        value={alignSelf17}
+                        onChange={handleAlignSelf17Change}
+                     >
+                        <option value="auto">auto</option>
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.sectionTitle2}>Styles on Child 18</div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="flex-grow" 
+                     >
+                        flex-grow: {flexGrow18}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="flex-grow"
+                        value={flexGrow18}
+                        onChange={handleFlexGrow18Change}
+                     >
+                        <option value="0">0</option>
+                        <option value="0.25">0.25</option>
+                        <option value="0.5">0.5</option>
+                        <option value="0.75">0.75</option>
+                        <option value="1">1</option>
+                     </select>
+                  </div>
+
+                  <div className={styles.inputItem}>
+                     <label className={styles.inputTitle}
+                        htmlFor="align-self" 
+                     >
+                        align-self: {alignSelf18}
+                     </label>
+
+                     <select className={styles.input}
+                        type="text" 
+                        id="align-self"
+                        value={alignSelf18}
+                        onChange={handleAlignSelf18Change}
+                     >
+                        <option value="auto">auto</option>
+                        <option value="start">start</option>
+                        <option value="center">center</option>
+                        <option value="end">end</option>
+                     </select>
+                  </div>
 
                </div>
             </div>
@@ -384,29 +895,72 @@ export default function Home() {
                </div>
 
                <div className={styles.playground}>
-                  {/* <div className={styles.objsHolder}>
-                     <div className={styles.testObj}>Other Elements</div>
-                     <div className={styles.targetObjHolder}>
-                        <div className={styles.testObj}>Other Elements</div>
-                        <div className={styles.item}
-                           style={{
-                              backgroundColor: bgColor,
-                              color: color,
-                              width: width,
-                              height: height,
-                              border: border,
-                              borderRadius: borderRadius,
-                              padding: padding,
-                              margin: margin,
-                              fontSize: fontSize,
-                              fontFamily: fontFamily,
-                           }}
-                        >Target Element</div>
-                        <div className={styles.testObj}>Other Elements</div>
-                     </div>
-                     <div className={styles.testObj}>Other Elements</div>
-                  </div> */}
-                  Soon...
+                  <div className={styles.flexMom}
+                     style={{
+                        display: display,
+                        justifyContent: justifyContent,
+                        alignItems: alignItems,
+                        gap: gap,
+                        flexDirection: flexDirection,
+                        flexWrap: flexWrap,
+                        alignContent: alignContent,
+                     }}
+                  >
+                     <div className={styles.child}>Child 1</div>
+                     <div className={styles.child2}>Child 2</div>
+                     <div className={styles.child}>Child 3</div>
+                     <div className={styles.child2}>Child 4</div>
+                     <div className={styles.child}>Child 5</div>
+                     <div className={styles.child2}>Child 6</div>
+                     <div className={styles.child}>Child 7</div>
+                     <div className={styles.child2}>Child 8</div>
+                     <div className={styles.child}>Child 9</div>
+                     <div className={styles.child2}>Child 10</div>
+                     <div className={styles.child}>Child 11</div>
+                     <div className={styles.child2}>Child 12</div>
+
+                     <div className={styles.child}
+                        style={{
+                           flexGrow: flexGrow13,
+                           alignSelf: alignSelf13,
+                        }}
+                     >Child 13</div>
+
+                     <div className={styles.child2}
+                        style={{
+                           flexGrow: flexGrow14,
+                           alignSelf: alignSelf14,
+                        }}
+                     >Child 14</div>
+
+                     <div className={styles.child}
+                        style={{
+                           flexGrow: flexGrow15,
+                           alignSelf: alignSelf15,
+                        }}
+                     >Child 15</div>
+
+                     <div className={styles.child2}
+                        style={{
+                           flexGrow: flexGrow16,
+                           alignSelf: alignSelf16,
+                        }}
+                     >Child 16</div>
+
+                     <div className={styles.child}
+                        style={{
+                           flexGrow: flexGrow17,
+                           alignSelf: alignSelf17,
+                        }}
+                     >Child 17</div>
+
+                     <div className={styles.child2}
+                        style={{
+                           flexGrow: flexGrow18,
+                           alignSelf: alignSelf18,
+                        }}
+                     >Child 18</div>
+                  </div>
                </div>
             </div>
          </div>

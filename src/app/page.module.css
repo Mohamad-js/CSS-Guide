@@ -26,20 +26,29 @@
       flex-direction: column;
       width: 30%;
       height: 100%;
-      border: 1px solid black;
-      padding: 20px 10px 10px 10px;
+      padding: 20px 10px 0 10px;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(5px);
       
       .sectionTitle {
          background-color: rgb(92, 0, 145);
          color: white;
          padding: 10px;
          margin-bottom: 10px;
+         border-radius: 5px;
+      }
+      
+      .sectionTitle2 {
+         background-color: rgb(175, 42, 252);
+         color: white;
+         padding: 10px;
+         margin-bottom: 10px;
+         margin-top: 40px;
+         border-radius: 5px;
       }
 
       .inputItemsHolder {
          height: 100%;
-         padding: 10px;
-         border: 1px solid rgb(154, 154, 154);
          overflow: auto;
 
          &::-webkit-scrollbar {
@@ -51,6 +60,7 @@
             width: 100%;
             height: fit-content;
             border: 1px solid rgb(210, 210, 210);
+            border-radius: 5px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -58,18 +68,26 @@
             padding: 10px;
             margin-bottom: 10px;
 
+            &:focus {
+               border: 1px solid white;
+            }
+
             .inputTitle {
                font: 13px arial;
+               margin-bottom: 5px;
             }
 
             .input {
                width: 100%;
                padding: 10px 5px;
                background-color: rgba(255, 255, 255, 0.1);
-               backdrop-filter: blur(2px);
                outline: none;
-               border: 1px solid black;
+               border: 1px solid rgb(255, 255, 255);
                border-radius: 5px;
+
+               &:focus {
+                  background-color: white;
+               }
             }
          }
       }
@@ -79,7 +97,6 @@
    .previewHolder {
       width: 70%;
       height: 100%;
-      border: 1px solid black;
       padding: 20px 10px 10px 10px;
       display: flex;
       flex-direction: column;
@@ -92,13 +109,15 @@
          color: white;
          padding: 10px;
          margin-bottom: 10px;
+         border-radius: 5px;
       }
       
       .playground {
          width: 100%;
          height: 100%;
-         border: 1px solid black;
+         border: 1px solid rgb(255, 255, 255);
          display: flex;
+         border-radius: 5px;
          align-items: center;
          justify-content: center;
          gap: 10px;
@@ -126,7 +145,7 @@
                align-items: center;
             }
          }
-
+         
          .item {
             width: 200px;
             height: 200px;
@@ -136,6 +155,33 @@
             display: flex;
             align-items: center;
             justify-content: center;
+         }
+         
+         .flexMom {
+            width: 80%;
+            height: 80%;
+            background-color: rgba(255, 255, 255, 0.457);
+            font-size: 12px;
+            
+            .child {
+               width: 60px;
+               height: 60px;
+               color: white;
+               background-color: red;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+            
+            .child2 {
+               width: 60px;
+               height: 60px;
+               color: white;
+               background-color: rgb(4, 0, 255);
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
          }
       }
    }
